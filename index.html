@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head><base href="https://d16ilfvy4mv02r.cloudfront.net/workspaces/TKptONWbu2EihadrSStg5AcO5nf2oz63/c24a9bda-5432-4d38-8a91-1f4edc7e764e/files/">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Alfaro's Tour — Turismo receptivo y servicios de bienestar en Panamá. Explore la verdadera esencia de Panamá con guías expertos."/>
+  <meta name="keywords" content="Tours Panamá, Isla de los Monos, Emberá, Guna, San Blas, Casco Antiguo, Portobelo, Valle de Antón, Zona Libre Colón, Bienestar Panamá"/>
+  <meta property="og:title" content="Alfaro's Tour — Explore la Verdadera Esencia de Panamá"/>
+  <meta property="og:description" content="Tours de naturaleza, historia, compras y servicios de bienestar en Panamá con guías expertos."/>
+  <title>Alfaro's Tour — Explore la Verdadera Esencia de Panamá</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --verde:#1B4332; --verde-md:#2D6A4F; --verde-lt:#40916C;
+      --azul:#0077B6; --azul-lt:#00B4D8; --azul-pale:#90E0EF;
+      --dorado:#C9A84C; --dorado-lt:#E9C46A; --dorado-pale:#FFF3CD;
+      --blanco:#FAFAFA; --gris:#F4F6F4; --texto:#1A1A1A;
+      --wa:#25D366; --wa-dk:#1DAE54;
+      --shadow-sm:0 2px 12px rgba(0,0,0,.07);
+      --shadow-md:0 6px 24px rgba(0,0,0,.11);
+      --shadow-lg:0 16px 48px rgba(0,0,0,.16);
+      --radius:18px; --radius-sm:10px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;color:var(--texto);background:var(--blanco);overflow-x:hidden}
+
+    /* ── NAV ─────────────────────────────── */
+    nav{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(27,67,50,.96);backdrop-filter:blur(14px);
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0 5%;height:68px;
+      box-shadow:0 2px 20px rgba(0,0,0,.3);
+    }
+    .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+    .logo-icon{
+      width:42px;height:42px;border-radius:50%;
+      background:linear-gradient(135deg,var(--dorado),var(--dorado-lt));
+      display:flex;align-items:center;justify-content:center;font-size:20px;
+    }
+    .logo-name{font-family:'Playfair Display',serif;color:#fff;font-size:1.25rem;font-weight:700;line-height:1.1}
+    .logo-tag{font-size:.62rem;color:var(--dorado-lt);letter-spacing:1.5px;text-transform:uppercase}
+    .nav-links{display:flex;gap:4px;align-items:center}
+    .nav-links a{
+      color:rgba(255,255,255,.85);text-decoration:none;
+      padding:7px 13px;border-radius:8px;
+      font-size:.83rem;font-weight:700;letter-spacing:.4px;transition:all .25s;
+    }
+    .nav-links a:hover{background:rgba(201,168,76,.22);color:var(--dorado-lt)}
+    .nav-wa{
+      background:var(--wa)!important;color:#fff!important;
+      border-radius:24px!important;padding:8px 18px!important;
+      box-shadow:0 4px 14px rgba(37,211,102,.4);
+    }
+    .nav-wa:hover{background:var(--wa-dk)!important;transform:scale(1.04)}
+
+    /* ── HERO ─────────────────────────────── */
+    .hero{
+      position:relative;height:100vh;min-height:620px;
+      display:flex;align-items:center;justify-content:center;overflow:hidden;
+    }
+    .hero-bg{
+      position:absolute;inset:0;
+      background:url('hero_panama.png') center/cover no-repeat;
+      transform:scale(1.06);transition:transform 10s ease-out;
+    }
+    .hero:hover .hero-bg{transform:scale(1)}
+    .hero-ov{
+      position:absolute;inset:0;
+      background:linear-gradient(135deg,rgba(27,67,50,.88) 0%,rgba(0,119,182,.55) 55%,rgba(27,67,50,.78) 100%);
+    }
+    .hero-body{
+      position:relative;z-index:2;text-align:center;color:#fff;
+      padding:0 24px;max-width:920px;
+    }
+    .hero-pill{
+      display:inline-block;margin-bottom:22px;
+      border:1px solid var(--dorado);background:rgba(201,168,76,.18);
+      color:var(--dorado-lt);padding:7px 26px;border-radius:30px;
+      font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:700;
+    }
+    .hero-h1{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2.6rem,6.5vw,5.2rem);font-weight:900;
+      line-height:1.08;margin-bottom:22px;
+      text-shadow:2px 4px 24px rgba(0,0,0,.45);
+    }
+    .hero-h1 em{color:var(--dorado-lt);font-style:normal}
+    .hero-sub{
+      font-size:clamp(1rem,2.2vw,1.25rem);font-weight:300;
+      opacity:.92;margin-bottom:42px;line-height:1.75;
+      max-width:680px;margin-inline:auto;
+    }
+    .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn-wa{
+      display:inline-flex;align-items:center;gap:10px;
+      background:var(--wa);color:#fff;padding:16px 34px;
+      border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;
+      box-shadow:0 8px 28px rgba(37,211,102,.45);transition:all .3s;letter-spacing:.4px;
+    }
+    .btn-wa:hover{transform:translateY(-4px);box-shadow:0 14px 38px rgba(37,211,102,.55);background:var(--wa-dk)}
+    .btn-ghost{
+      display:inline-flex;align-items:center;gap:10px;
+      border:2px solid rgba(255,255,255,.72);color:#fff;
+      padding:14px 30px;border-radius:50px;text-decoration:none;
+      font-weight:600;font-size:1rem;transition:all .3s;
+    }
+    .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff;transform:translateY(-3px)}
+    .scroll-hint{
+      position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+      color:rgba(255,255,255,.65);text-align:center;cursor:pointer;
+      animation:bobble 2.2s infinite;font-size:.72rem;letter-spacing:2px;
+    }
+    .scroll-hint .arr{font-size:1.4rem;display:block;margin-top:5px}
+    @keyframes bobble{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)}}
+
+    /* ── STAT BAR ─────────────────────────── */
+    .stat-bar{
+      background:linear-gradient(135deg,var(--dorado),var(--dorado-lt));
+      padding:36px 5%;
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+      gap:20px;text-align:center;
+    }
+    .stat-n{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--verde)}
+    .stat-l{font-size:.82rem;color:rgba(27,67,50,.78);font-weight:700;letter-spacing:.3px}
+
+    /* ── SECTION BASE ─────────────────────── */
+    section{padding:88px 5%}
+    .s-label{
+      display:block;margin-bottom:10px;
+      font-size:.75rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;
+      background:linear-gradient(135deg,var(--dorado),var(--dorado-lt));
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    }
+    .s-title{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2rem,4.5vw,3.1rem);font-weight:700;
+      color:var(--verde);margin-bottom:14px;line-height:1.15;
+    }
+    .s-title.w{color:#fff}
+    .s-sub{font-size:1.05rem;color:#5a5a5a;max-width:660px;line-height:1.85;margin-bottom:48px}
+    .s-sub.w{color:rgba(255,255,255,.82)}
+
+    /* ── TOUR CARDS ───────────────────────── */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+    .tcard{
+      background:#fff;border-radius:var(--radius);overflow:hidden;
+      box-shadow:var(--shadow-sm);transition:all .4s cubic-bezier(.175,.885,.32,1.275);
+    }
+    .tcard:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}
+    .tcard-img{position:relative;height:245px;overflow:hidden}
+    .tcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+    .tcard:hover .tcard-img img{transform:scale(1.09)}
+    .tcard-badge{
+      position:absolute;top:14px;left:14px;
+      background:var(--dorado);color:#fff;
+      padding:5px 14px;border-radius:20px;font-size:.72rem;font-weight:700;
+    }
+    .tcard-body{padding:28px}
+    .tcard-ico{font-size:1.9rem;margin-bottom:10px}
+    .tcard-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--verde);margin-bottom:9px}
+    .tcard-txt{color:#666;line-height:1.82;font-size:.93rem;margin-bottom:14px}
+    .species{list-style:none;margin-bottom:18px}
+    .species li{display:flex;align-items:flex-start;gap:8px;font-size:.89rem;color:#555;margin-bottom:6px}
+    .species li::before{content:"●";color:var(--dorado);font-size:.45rem;margin-top:7px;flex-shrink:0}
+    .species em{color:#999;font-style:italic;font-size:.8rem}
+    .btn-sm{
+      display:inline-flex;align-items:center;gap:8px;
+      background:linear-gradient(135deg,var(--verde),var(--verde-md));
+      color:#fff;padding:11px 22px;border-radius:24px;text-decoration:none;
+      font-size:.86rem;font-weight:700;transition:all .3s;
+    }
+    .btn-sm:hover{transform:translateX(5px);box-shadow:0 6px 22px rgba(27,67,50,.38)}
+
+    /* ── GALLERY WIDE ─────────────────────── */
+    .gal{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      grid-template-rows:290px 290px;
+      gap:10px;border-radius:var(--radius);overflow:hidden;margin-bottom:50px;
+    }
+    .gal-main{grid-row:span 2}
+    .gal div{overflow:hidden}
+    .gal img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+    .gal div:hover img{transform:scale(1.06)}
+
+    /* ── HISTORIA ─────────────────────────── */
+    #historia{background:#fff}
+    .hgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
+    .hcard{
+      background:#fff;border-radius:var(--radius);overflow:hidden;
+      box-shadow:var(--shadow-sm);border-top:4px solid var(--azul);transition:all .4s;
+    }
+    .hcard:hover{transform:translateY(-8px);box-shadow:var(--shadow-md)}
+    .hcard .tcard-img{height:195px}
+    .hcard .tcard-body{padding:22px}
+    .hcard .tcard-title{color:var(--azul);font-size:1.15rem}
+    .yr{display:inline-block;background:var(--azul);color:#fff;padding:3px 10px;border-radius:12px;font-size:.72rem;font-weight:700;margin-bottom:7px}
+
+    /* ── COMPRAS ──────────────────────────── */
+    #compras{background:linear-gradient(135deg,var(--verde) 0%,var(--azul) 100%)}
+    .cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
+    .ccard{
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+      border-radius:var(--radius);padding:36px;text-align:center;
+      backdrop-filter:blur(10px);transition:all .3s;
+    }
+    .ccard:hover{background:rgba(255,255,255,.18);transform:translateY(-6px)}
+    .cico{font-size:3.2rem;margin-bottom:14px}
+    .ctitle{font-family:'Playfair Display',serif;font-size:1.42rem;color:#fff;margin-bottom:11px}
+    .ctxt{color:rgba(255,255,255,.85);line-height:1.82;font-size:.93rem}
+
+    /* ── BIENESTAR ────────────────────────── */
+    #bienestar{
+      position:relative;overflow:hidden;
+      background:linear-gradient(135deg,#080c0a 0%,#0e1e16 50%,#0a1520 100%);
+    }
+    #bienestar::before{
+      content:'';position:absolute;inset:0;
+      background:url('spa_bienestar.png') center/cover;opacity:.14;
+    }
+    #bienestar>*{position:relative;z-index:1}
+    .well-hd{text-align:center;margin-bottom:56px}
+    .well-hd .s-title{color:var(--dorado-lt)}
+    .well-tag{font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:rgba(255,255,255,.68);margin-top:8px}
+    .wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+    .wcard{
+      background:linear-gradient(135deg,rgba(201,168,76,.14),rgba(201,168,76,.04));
+      border:1px solid rgba(201,168,76,.28);border-radius:var(--radius);
+      padding:36px;text-align:center;transition:all .4s;
+    }
+    .wcard:hover{background:linear-gradient(135deg,rgba(201,168,76,.24),rgba(201,168,76,.1));transform:translateY(-8px);border-color:var(--dorado)}
+    .wico{font-size:2.8rem;margin-bottom:14px}
+    .wtitle{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--dorado-lt);margin-bottom:11px}
+    .wtxt{color:rgba(255,255,255,.75);line-height:1.82;font-size:.92rem}
+
+    /* ── PAGOS ────────────────────────────── */
+    #pagos{background:var(--gris)}
+    .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .pbox{
+      background:#fff;border-radius:var(--radius);padding:40px;
+      box-shadow:var(--shadow-sm);border-left:6px solid var(--dorado);
+    }
+    .pbox h3{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--verde);margin-bottom:26px}
+    .prow{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+    .picon{
+      width:42px;height:42px;border-radius:11px;flex-shrink:0;
+      background:linear-gradient(135deg,var(--dorado),var(--dorado-lt));
+      display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+    }
+    .plbl{font-size:.77rem;color:#aaa;text-transform:uppercase;letter-spacing:1px}
+    .pval{font-weight:700;color:var(--texto);font-size:.98rem}
+    .pnote{margin-top:22px;padding:15px;background:#f0f9f4;border-radius:10px;border-left:4px solid var(--verde);font-size:.88rem;color:#555;line-height:1.65}
+    .pcta{
+      background:linear-gradient(135deg,var(--verde),var(--verde-md));
+      border-radius:22px;padding:50px 38px;color:#fff;text-align:center;
+    }
+    .pcta-ico{font-size:3.8rem;margin-bottom:18px}
+    .pcta h3{font-family:'Playfair Display',serif;font-size:1.9rem;margin-bottom:12px}
+    .pcta p{opacity:.85;margin-bottom:30px;line-height:1.65}
+    .btn-wa-lg{
+      display:inline-flex;align-items:center;gap:12px;
+      background:var(--wa);color:#fff;padding:18px 40px;border-radius:50px;
+      text-decoration:none;font-weight:700;font-size:1.08rem;
+      box-shadow:0 8px 32px rgba(37,211,102,.5);transition:all .3s;
+    }
+    .btn-wa-lg:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 14px 42px rgba(37,211,102,.6)}
+
+    /* ── CONTACTO ─────────────────────────── */
+    #contacto{background:var(--verde);padding:60px 5%}
+    .congrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+    .concard{
+      text-align:center;padding:28px 18px;
+      background:rgba(255,255,255,.08);border-radius:14px;
+      border:1px solid rgba(255,255,255,.1);transition:.3s;
+    }
+    .concard:hover{background:rgba(255,255,255,.15);transform:translateY(-4px)}
+    .conicon{font-size:2.3rem;margin-bottom:12px}
+    .conlbl{font-size:.72rem;color:var(--dorado-lt);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+    .conval{color:#fff;font-size:.96rem;font-weight:600;text-decoration:none;display:block}
+    .conval:hover{color:var(--dorado-lt)}
+
+    /* ── FOOTER ───────────────────────────── */
+    footer{
+      background:#080f0b;color:rgba(255,255,255,.55);
+      padding:28px 5%;display:flex;justify-content:space-between;
+      align-items:center;flex-wrap:wrap;gap:14px;
+    }
+    .fbrand{font-family:'Playfair Display',serif;color:var(--dorado-lt);font-size:1.05rem}
+    .flinks{display:flex;gap:18px}
+    .flinks a{color:rgba(255,255,255,.45);text-decoration:none;font-size:.82rem;transition:.2s}
+    .flinks a:hover{color:var(--dorado-lt)}
+
+    /* ── FLOATING WA ──────────────────────── */
+    .wa-float{
+      position:fixed;bottom:28px;right:28px;z-index:999;
+      background:var(--wa);color:#fff;width:58px;height:58px;
+      border-radius:50%;display:flex;align-items:center;justify-content:center;
+      font-size:1.7rem;text-decoration:none;
+      box-shadow:0 6px 24px rgba(37,211,102,.5);
+      animation:pulse 2.5s infinite;
+    }
+    @keyframes pulse{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.5)}50%{box-shadow:0 6px 34px rgba(37,211,102,.75)}}
+
+    /* ── RESPONSIVE ───────────────────────── */
+    @media(max-width:768px){
+      .nav-links .hide{display:none}
+      .pgrid{grid-template-columns:1fr}
+      .gal{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+      .gal-main{grid-row:span 1}
+    }
+  </style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/50760173735" class="wa-float" title="Chatear por WhatsApp" target="_blank">📱</a>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">
+    <div class="logo-icon">🦋</div>
+    <div>
+      <div class="logo-name">Alfaro's Tour</div>
+      <div class="logo-tag">Panamá Auténtico</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#naturaleza" class="hide">🌿 Naturaleza</a>
+    <a href="#historia" class="hide">🏛️ Historia</a>
+    <a href="#compras" class="hide">🛍️ Compras</a>
+    <a href="#bienestar" class="hide">💆 Bienestar</a>
+    <a href="#pagos" class="hide">💳 Reservas</a>
+    <a href="https://wa.me/50760173735" class="nav-wa" target="_blank">📱 WhatsApp</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-body">
+    <div class="hero-pill">✦ Guías Certificados &amp; Experiencias Únicas ✦</div>
+    <h1 class="hero-h1">
+      Explore la Verdadera<br/><em>Esencia de Panamá</em>
+    </h1>
+    <p class="hero-sub">
+      Biodiversidad tropical, culturas indígenas milenarias, historia colonial y la magia de un país donde se unen dos océanos.
+      Vívalo con <strong>Alfaro's Tour</strong>.
+    </p>
+    <div class="hero-btns">
+      <a href="https://wa.me/50760173735?text=Hola!%20Me%20interesa%20reservar%20un%20tour%20en%20Panam%C3%A1" class="btn-wa" target="_blank">📱 Reservar por WhatsApp</a>
+      <a href="#naturaleza" class="btn-ghost">🗺️ Ver Todos los Tours</a>
+    </div>
+  </div>
+  <div class="scroll-hint" onclick="document.getElementById('naturaleza').scrollIntoView({behavior:'smooth'})">
+    EXPLORAR<span class="arr">↓</span>
+  </div>
+</div>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div><div class="stat-n">10+</div><div class="stat-l">Destinos Únicos</div></div>
+  <div><div class="stat-n">3</div><div class="stat-l">Etnias Indígenas</div></div>
+  <div><div class="stat-n">500+</div><div class="stat-l">Viajeros Felices</div></div>
+  <div><div class="stat-n">2</div><div class="stat-l">Patrimonios UNESCO</div></div>
+  <div><div class="stat-n">24/7</div><div class="stat-l">Soporte WhatsApp</div></div>
+</div>
+
+<!-- GALERÍA -->
+<section style="padding:60px 5% 0;background:#fff">
+  <div style="text-align:center;margin-bottom:38px">
+    <span class="s-label">Galería de Destinos</span>
+    <h2 class="s-title">Un País, Mil Maravillas</h2>
+  </div>
+  <div class="gal">
+    <div class="gal-main"><img src="hero_panama.png" alt="Panamá Canal y Selva"/></div>
+    <div><img src="monos_lago_gatun.png" alt="Monos Lago Gatún"/></div>
+    <div><img src="cultura_embera.png" alt="Cultura Emberá"/></div>
+    <div><img src="casco_antiguo.png" alt="Casco Antiguo Panamá"/></div>
+    <div><img src="valle_anton.png" alt="Valle de Antón"/></div>
+  </div>
+</section>
+
+<!-- NATURALEZA -->
+<section id="naturaleza" style="background:var(--gris)">
+  <span class="s-label">🌿 Tours de Naturaleza</span>
+  <h2 class="s-title">Biodiversidad Sin Igual</h2>
+  <p class="s-sub">Panamá alberga el 3% de la biodiversidad mundial en solo el 0.08% de la superficie terrestre. Cada tour es una clase magistral de naturaleza viva.</p>
+
+  <div class="cards">
+    <!-- ISLA MONOS -->
+    <div class="tcard">
+      <div class="tcard-img">
+        <img src="monos_lago_gatun.png" alt="Isla de los Monos — Lago Gatún"/>
+        <span class="tcard-badge">⭐ Tour Estrella</span>
+      </div>
+      <div class="tcard-body">
+        <div class="tcard-ico">🐒</div>
+        <h3 class="tcard-title">Isla de los Monos — Lago Gatún</h3>
+        <p class="tcard-txt">Navegue las aguas del mítico Lago Gatún —parte integral del Canal de Panamá— para llegar a una isla habitada exclusivamente por tres especies de primates nativos en completa libertad.</p>
+        <ul class="species">
+          <li><strong>Mono Capuchino Cariblanco</strong> <em>(Cebus capucinus)</em> — Reconocible por su cara y pecho blancos; altamente inteligente y sociable.</li>
+          <li><strong>Tamarino de Geoffroy / Mono Tití</strong> <em>(Saguinus geoffroyi)</em> — Diminuto primate endémico de Panamá con cabeza bicolor plateada y negra.</li>
+          <li><strong>Mono Aullador Negro</strong> <em>(Alouatta palliata)</em> — El mamífero más ruidoso del Nuevo Mundo; sus vocalizaciones alcanzan los 5 km.</li>
+        </ul>
+        <a href="https://wa.me/50760173735?text=Hola!%20Quiero%20reservar%20el%20tour%20Isla%20de%20los%20Monos" class="btn-sm" target="_blank">📱 Reservar ahora →</a>
+      </div>
+    </div>
+
+    <!-- CULTURA INDÍGENA -->
+    <div class="tcard">
+      <div class="tcard-img">
+        <img src="cultura_embera.png" alt="Pueblo Emberá"/>
+        <span class="tcard-badge">🏺 Cultural</span>
+      </div>
+      <div class="tcard-body">
+        <div class="tcard-ico">🪶</div>
+        <h3 class="tcard-title">Cultura Indígena Auténtica</h3>
+        <p class="tcard-txt">Encuentro genuino con los pueblos originarios de Panamá, guardianes de saberes ancestrales, artesanías únicas y gastronomías milenarias.</p>
+        <ul class="species">
+          <li><strong style="color:var(--verde-md)">Emberá</strong> — Río Chagres. Cestería en nahua, talla en tagua, cerámica pintada y gastronomía de río.</li>
+          <li><strong style="color:var(--azul)">Guna (Kuna)</strong> — San Blas. Creadores de las Molas multicolores, navegantes ancestrales del Caribe.</li>
+          <li><strong style="color:var(--dorado)">Ngäbe</strong> — Región Ngäbe-Buglé. Chaquiras, vestimenta nagua, cultura de resistencia y montaña.</li>
+        </ul>
+        <a href="https://wa.me/50760173735?text=Hola!%20Me%20interesa%20el%20tour%20de%20Cultura%20Indigena" class="btn-sm" target="_blank">📱 Reservar ahora →</a>
+      </div>
+    </div>
+
+    <!-- SAN BLAS -->
+    <div class="tcard">
+      <div class="tcard-img">
+        <img src="san_blas_guna.png" alt="San Blas — Guna Yala"/>
+        <span class="tcard-badge">🏝️ Paraíso Caribe</span>
+      </div>
+      <div class="tcard-body">
+        <div class="tcard-ico">🌺</div>
+        <h3 class="tcard-title">San Blas — Guna Yala</h3>
+        <p class="tcard-txt">365 islas de arena blanca y agua turquesa cristalina en el Caribe panameño, territorio autónomo del pueblo Guna. Un paraíso cultural e intacto donde el tiempo se detiene.</p>
+        <ul class="species">
+          <li>Snorkel en arrecifes de coral virgen del Caribe</li>
+          <li>Molas originales directas de artistas Guna</li>
+          <li>Gastronomía de langosta y mariscos frescos</li>
+          <li>Convivencia auténtica con familias del archipiélago</li>
+        </ul>
+        <a href="https://wa.me/50760173735?text=Hola!%20Me%20interesa%20el%20tour%20a%20San%20Blas" class="btn-sm" target="_blank">📱 Reservar ahora →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section id="historia">
+  <span class="s-label">🏛️ Historia &amp; Ciudad</span>
+  <h2 class="s-title">Siglos de Historia Viva</h2>
+  <p class="s-sub">De la primera ciudad española en el Pacífico a los coloridos barrios coloniales y los paisajes del Canal — Panamá es un libro de historia abierto.</p>
+  <div class="hgrid">
+    <div class="hcard">
+      <div class="tcard-img"><img src="panama_viejo.png" alt="Panamá Viejo"/></div>
+      <div class="tcard-body">
+        <div class="yr">Fundada 1519 · UNESCO</div>
+        <h3 class="tcard-title">Panamá Viejo</h3>
+        <p class="tcard-txt">Primera ciudad europea permanente en la costa del Pacífico de América. Fundada por Pedrarias Dávila el 15 de agosto de 1519, fue saqueada y destruida por el corsario galés Henry Morgan en 1671. Sus icónicas ruinas son Patrimonio de la Humanidad.</p>
+        <a href="https://wa.me/50760173735?text=Hola!%20Me%20interesa%20Panamá%20Viejo" class="btn-sm" style="background:linear-gradient(135deg,var(--azul),var(--azul-lt))" target="_blank">📱 Reservar →</a>
+      </div>
+    </div>
+    <div class="hcard">
+      <div class="tcard-img"><img src="casco_antiguo.png" alt="Casco Antiguo"/></div>
+      <div class="tcard-body">
+        <div class="yr">Fundado 1673 · UNESCO</div>
+        <h3 class="tcard-title">Casco Antiguo &amp; Causeway</h3>
+        <p class="tcard-txt">El Casco Antiguo (San Felipe) fue reconstruido en 1673 y alberga joyería arquitectónica colonial española, francesa e italiana. El Causeway de Amador ofrece vistas panorámicas del Canal, los puentes intercontinentales y el skyline de la ciudad.</p>
+        <a href="https://wa.me/50760173735?text=Hola!%20Me%20interesa%20el%20Casco%20Antiguo" class="btn-sm" style="background:linear-gradient(135deg,var(--azul),var(--azul-lt))" target="_blank">📱 Reservar →</a>
+      </div>
+    </div>
+    <div class="hcard">
+      <div class="tcard-img"><img src="portobelo.png" alt="Portobelo"/></div>
+      <div class="tcard-body">
+        <div class="yr">Siglo XVI · UNESCO</div>
+        <h3 class="tcard-title">Portobelo</h3>
+        <p class="tcard-txt">Fortaleza española colonial en el Caribe, centro del comercio transatlántico de oro y plata. Epicentro de la cultura afroantillana en Panamá y hogar del venerado <strong>Cristo Negro de Portobelo</strong>, que cada octubre convoca a miles de peregrinos.</p>
+        <a href="https://wa.me/50760173735?text=Hola!%20Me%20interesa%20Portobelo" class="btn-sm" style="background:linear-gradient(135deg,var(--azul),var(--azul-lt))" target="_blank">📱 Reservar →</a>
+      </div>
+    </div>
+    <div class="hcard">
+      <div class="tcard-img"><img src="valle_anton.png" alt="Valle de Antón"/></div>
+      <div class="tcard-body">
+        <div class="yr">Volcán Extinto · 600 msnm</div>
+        <h3 class="tcard-title">Valle de Antón</h3>
+        <p class="tcard-txt">Enclavado en el cráter de un volcán extinto —reputado el más grande habitado del mundo— a 600 msnm. Clima fresco de montaña, pozos termales de aguas azufradas, cascadas, senderos ecológicos y el mercado de artesanías más pintoresco de Panamá.</p>
+        <a href="https://wa.me/50760173735?text=Hola!%20Me%20interesa%20el%20Valle%20de%20Antón" class="btn-sm" style="background:linear-gradient(135deg,var(--azul),var(--azul-lt))" target="_blank">📱 Reservar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPRAS -->
+<section id="compras">
+  <div style="text-align:center;margin-bottom:48px">
+    <span class="s-label" style="-webkit-text-fill-color:var(--dorado-lt);color:var(--dorado-lt)">🛍️ Compras &amp; Logística</span>
+    <h2 class="s-title w">Compras y Traslados Especializados</h2>
+    <p class="s-sub w">Desde la segunda zona franca más grande del mundo hasta traslados puntuales a puertos de cruceros.</p>
+  </div>
+  <div class="cgrid">
+    <div class="ccard">
+      <div class="cico">🏪</div>
+      <h3 class="ctitle">Zona Libre de Colón</h3>
+      <p class="ctxt">Segunda zona franca más grande del mundo. Más de 2,500 empresas con marcas internacionales a precios libres de impuestos: electrónicos, perfumes, joyería, ropa y licores. Organización completa del traslado y circuito de compras.</p>
+    </div>
+    <div class="ccard">
+      <div class="cico">🚢</div>
+      <h3 class="ctitle">Puerto Cruceros Colón</h3>
+      <p class="ctxt">Traslados especializados y puntuales para pasajeros de cruceros que arriban al Puerto de Colón. Excursiones de medio día o día completo con retorno garantizado a tiempo para su embarque.</p>
+    </div>
+    <div class="ccard">
+      <div class="cico">⚓</div>
+      <h3 class="ctitle">Fuerte Sherman</h3>
+      <p class="ctxt">Traslados desde y hacia el histórico Fuerte Sherman en la entrada atlántica del Canal de Panamá. Combinable con excursiones a Portobelo, la Zona Libre y la selva del Darién.</p>
+    </div>
+    <div class="ccard">
+      <div class="cico">🚐</div>
+      <h3 class="ctitle">Traslados Privados</h3>
+      <p class="ctxt">Vehículos climatizados con conductor bilingüe para grupos de cualquier tamaño. Aeropuerto, hoteles, puertos y cualquier destino en Panamá. Puntualidad y comodidad garantizadas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BIENESTAR -->
+<section id="bienestar">
+  <div class="well-hd">
+    <span class="s-label" style="-webkit-text-fill-color:var(--dorado-lt);color:var(--dorado-lt)">💆 Servicios de Bienestar</span>
+    <h2 class="s-title" style="color:var(--dorado-lt)">Relajación &amp; Belleza Profesional</h2>
+    <p class="well-tag">"Relájese y renuévese con nuestros especialistas después de su aventura"</p>
+  </div>
+  <div class="wgrid">
+    <div class="wcard">
+      <div class="wico">💇‍♀️</div>
+      <h3 class="wtitle">Estilismo Profesional</h3>
+      <p class="wtxt">Cortes modernos y clásicos, coloración, tratamientos de hidratación profunda y peinados para eventos especiales. Trabajamos solo con productos de primera línea internacional.</p>
+    </div>
+    <div class="wcard">
+      <div class="wico">🌸</div>
+      <h3 class="wtitle">Cosmetología</h3>
+      <p class="wtxt">Tratamientos faciales de rejuvenecimiento, limpieza profunda, hidratación, maquillaje artístico y social. Esteticistas certificadas con los más altos estándares del sector.</p>
+    </div>
+    <div class="wcard">
+      <div class="wico">💅</div>
+      <h3 class="wtitle">Manicura &amp; Pedicura</h3>
+      <p class="wtxt">Manicura clásica y semipermanente, nail art personalizado y pedicura spa con exfoliación y masaje. El toque final perfecto para llevar la elegancia de Panamá consigo.</p>
+    </div>
+    <div class="wcard">
+      <div class="wico">✨</div>
+      <h3 class="wtitle">Paquetes Combo</h3>
+      <p class="wtxt">Combina tu tour favorito con una sesión de bienestar completa: estilismo + manicura + facial. Reserva junto con tu tour y obtén tarifas especiales exclusivas.</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:48px">
+    <a href="https://wa.me/50760173735?text=Hola!%20Me%20interesan%20los%20servicios%20de%20bienestar%20y%20est%C3%A9tica" class="btn-wa-lg" target="_blank">
+      📱 Consultar Servicios de Bienestar
+    </a>
+  </div>
+</section>
+
+<!-- PAGOS -->
+<section id="pagos">
+  <span class="s-label">💳 Reservas &amp; Pagos</span>
+  <h2 class="s-title">Reserve su Aventura Hoy</h2>
+  <p class="s-sub">Proceso sencillo y seguro. Confirmamos su reserva por WhatsApp en menos de una hora.</p>
+  <div class="pgrid">
+    <div class="pbox">
+      <h3>💳 Datos Bancarios</h3>
+      <div class="prow">
+        <div class="picon">👤</div>
+        <div><div class="plbl">Titular</div><div class="pval">Rogelio Ismael Alfaro Rivas</div></div>
+      </div>
+      <div class="prow">
+        <div class="picon">🏦</div>
+        <div><div class="plbl">Banco</div><div class="pval">Banco General</div></div>
+      </div>
+      <div class="prow">
+        <div class="picon">💰</div>
+        <div><div class="plbl">Tipo de Cuenta</div><div class="pval">Cuenta de Ahorros</div></div>
+      </div>
+      <div class="prow">
+        <div class="picon">🔢</div>
+        <div><div class="plbl">Número de Cuenta</div><div class="pval" style="font-family:monospace;font-size:1.05rem;letter-spacing:1px">#0472019545084</div></div>
+      </div>
+      <div class="pnote">✅ También aceptamos <strong>Yappy, Nequi</strong> y <strong>transferencias internacionales</strong>. Envíe su comprobante de pago por WhatsApp para confirmar la reserva de inmediato.</div>
+    </div>
+    <div class="pcta">
+      <div class="pcta-ico">🌴</div>
+      <h3>¿Listo para Explorar?</h3>
+      <p>Escríbanos ahora y diseñaremos el tour perfecto según sus intereses, presupuesto y disponibilidad. ¡Respuesta garantizada en menos de 1 hora!</p>
+      <a href="https://wa.me/50760173735?text=Hola%20Alfaro%27s%20Tour!%20Me%20gustar%C3%ADa%20reservar%20un%20tour.%20%C2%BFPodr%C3%ADan%20informarme%3F" class="btn-wa-lg" target="_blank">
+        📱 Reservar por WhatsApp
+      </a>
+      <div style="margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <span style="color:rgba(255,255,255,.7);font-size:.83rem">📧 touralfaro@gmail.com</span>
+        <span style="color:rgba(255,255,255,.4)">|</span>
+        <span style="color:rgba(255,255,255,.7);font-size:.83rem">📸 @trips_alfaro507</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div style="text-align:center;margin-bottom:38px">
+    <h2 style="font-family:'Playfair Display',serif;font-size:2rem;color:#fff;margin-bottom:8px">Contáctenos</h2>
+    <p style="color:rgba(255,255,255,.7)">Disponibles 24/7 para hacer de su viaje una experiencia inolvidable.</p>
+  </div>
+  <div class="congrid">
+    <div class="concard">
+      <div class="conicon">📱</div>
+      <div class="conlbl">WhatsApp</div>
+      <a href="https://wa.me/50760173735" class="conval" target="_blank">+507 6017-3735</a>
+    </div>
+    <div class="concard">
+      <div class="conicon">📧</div>
+      <div class="conlbl">Correo Electrónico</div>
+      <a href="mailto:touralfaro@gmail.com" class="conval">touralfaro@gmail.com</a>
+    </div>
+    <div class="concard">
+      <div class="conicon">📸</div>
+      <div class="conlbl">Instagram</div>
+      <a href="https://instagram.com/trips_alfaro507" class="conval" target="_blank">@trips_alfaro507</a>
+    </div>
+    <div class="concard">
+      <div class="conicon">📍</div>
+      <div class="conlbl">Ubicación</div>
+      <span class="conval">Ciudad de Panamá, Panamá</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="fbrand">🦋 Alfaro's Tour</div>
+    <div style="margin-top:4px;font-size:.82rem">© 2025 Alfaro's Tour. Todos los derechos reservados.</div>
+  </div>
+  <div class="flinks">
+    <a href="#naturaleza">Naturaleza</a>
+    <a href="#historia">Historia</a>
+    <a href="#bienestar">Bienestar</a>
+    <a href="#pagos">Reservas</a>
+    <a href="https://wa.me/50760173735" target="_blank">WhatsApp</a>
+  </div>
+  <div style="color:rgba(255,255,255,.35);font-size:.77rem;font-style:italic">
+    "Explore la verdadera esencia de Panamá con guías expertos"
+  </div>
+</footer>
+
+<script>
+  // Intersection Observer — fade-in cards
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.style.opacity='1';
+        e.target.style.transform=e.target.dataset.base||'translateY(0)';
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.tcard,.hcard,.ccard,.wcard').forEach(c=>{
+    c.style.opacity='0';
+    c.style.transform='translateY(28px)';
+    c.style.transition='opacity .55s ease, transform .55s ease, box-shadow .35s';
+    io.observe(c);
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const t=document.querySelector(a.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}
+    });
+  });
+</script>
+</body>
+</html>
