@@ -3,235 +3,107 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Alfaro's Tour — Turismo receptivo y servicios de bienestar en Panamá. Explore la verdadera esencia de Panamá con guías expertos."/>
-  <meta name="keywords" content="Tours Panamá, Isla de los Monos, Emberá, Guna, San Blas, Casco Antiguo, Portobelo, Valle de Antón, Zona Libre Colón, Bienestar Panamá"/>
-  <meta property="og:title" content="Alfaro's Tour — Explore la Verdadera Esencia de Panamá"/>
-  <meta property="og:description" content="Tours de naturaleza, historia, compras y servicios de bienestar en Panamá con guías expertos."/>
   <title>Alfaro's Tour — Explore la Verdadera Esencia de Panamá</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
   <style>
-    :root{
-      --verde:#1B4332; --verde-md:#2D6A4F; --verde-lt:#40916C;
-      --azul:#0077B6; --azul-lt:#00B4D8; --azul-pale:#90E0EF;
-      --dorado:#C9A84C; --dorado-lt:#E9C46A; --dorado-pale:#FFF3CD;
-      --blanco:#FAFAFA; --gris:#F4F6F4; --texto:#1A1A1A;
-      --wa:#25D366; --wa-dk:#1DAE54;
-      --shadow-sm:0 2px 12px rgba(0,0,0,.07);
-      --shadow-md:0 6px 24px rgba(0,0,0,.11);
-      --shadow-lg:0 16px 48px rgba(0,0,0,.16);
-      --radius:18px; --radius-sm:10px;
+    :root {
+      --verde: #1B4332; --verde-md: #2D6A4F; --verde-lt: #40916C;
+      --azul: #0077B6; --azul-lt: #00B4D8;
+      --dorado: #C9A84C; --dorado-lt: #E9C46A;
+      --blanco: #FAFAFA; --gris: #F4F6F4; --texto: #1A1A1A;
+      --wa: #25D366; --wa-dk: #1DAE54;
+      --shadow-md: 0 6px 24px rgba(0,0,0,.11);
+      --radius: 18px;
     }
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:'Lato',sans-serif;color:var(--texto);background:var(--blanco);overflow-x:hidden}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; color: var(--texto); background: var(--blanco); overflow-x: hidden; }
 
-    /* ── NAV ─────────────────────────────── */
-    nav{
-      position:sticky;top:0;z-index:1000;
-      background:rgba(27,67,50,.96);backdrop-filter:blur(14px);
-      display:flex;align-items:center;justify-content:space-between;
-      padding:0 5%;height:68px;
-      box-shadow:0 2px 20px rgba(0,0,0,.3);
+    /* NAVEGACIÓN */
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(27,67,50,.96); backdrop-filter: blur(14px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 75px; box-shadow: 0 2px 20px rgba(0,0,0,.3);
     }
-    .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
-    .logo-icon{
-      width:42px;height:42px;border-radius:50%;
-      background:#fff; /* Fondo blanco para que el .ico destaque */
-      display:flex;align-items:center;justify-content:center;
-      overflow: hidden;
-    }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo-icon { width: 45px; height: 45px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden; }
     .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
-    .logo-name{font-family:'Playfair Display',serif;color:#fff;font-size:1.25rem;font-weight:700;line-height:1.1}
-    .logo-tag{font-size:.62rem;color:var(--dorado-lt);letter-spacing:1.5px;text-transform:uppercase}
-    .nav-links{display:flex;gap:4px;align-items:center}
-    .nav-links a{
-      color:rgba(255,255,255,.85);text-decoration:none;
-      padding:7px 13px;border-radius:8px;
-      font-size:.83rem;font-weight:700;letter-spacing:.4px;transition:all .25s;
-    }
-    .nav-links a:hover{background:rgba(201,168,76,.22);color:var(--dorado-lt)}
-    .nav-wa{
-      background:var(--wa)!important;color:#fff!important;
-      border-radius:24px!important;padding:8px 18px!important;
-      box-shadow:0 4px 14px rgba(37,211,102,.4);
-    }
-    .nav-wa:hover{background:var(--wa-dk)!important;transform:scale(1.04)}
+    .logo-name { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.3rem; font-weight: 700; }
+    .logo-tag { font-size: .65rem; color: var(--dorado-lt); text-transform: uppercase; letter-spacing: 1px; }
 
-    /* ── HERO ─────────────────────────────── */
-    .hero{
-      position:relative;height:100vh;min-height:620px;
-      display:flex;align-items:center;justify-content:center;overflow:hidden;
-    }
-    .hero-bg{
-      position:absolute;inset:0;
-      background:url('hero_panama.png') center/cover no-repeat;
-      transform:scale(1.06);transition:transform 10s ease-out;
-    }
-    .hero:hover .hero-bg{transform:scale(1)}
-    .hero-ov{
-      position:absolute;inset:0;
-      background:linear-gradient(135deg,rgba(27,67,50,.88) 0%,rgba(0,119,182,.55) 55%,rgba(27,67,50,.78) 100%);
-    }
-    .hero-body{
-      position:relative;z-index:2;text-align:center;color:#fff;
-      padding:0 24px;max-width:920px;
-    }
-    .hero-pill{
-      display:inline-block;margin-bottom:22px;
-      border:1px solid var(--dorado);background:rgba(201,168,76,.18);
-      color:var(--dorado-lt);padding:7px 26px;border-radius:30px;
-      font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:700;
-    }
-    .hero-h1{
-      font-family:'Playfair Display',serif;
-      font-size:clamp(2.6rem,6.5vw,5.2rem);font-weight:900;
-      line-height:1.08;margin-bottom:22px;
-      text-shadow:2px 4px 24px rgba(0,0,0,.45);
-    }
-    .hero-h1 em{color:var(--dorado-lt);font-style:normal}
-    .hero-sub{
-      font-size:clamp(1rem,2.2vw,1.25rem);font-weight:300;
-      opacity:.92;margin-bottom:42px;line-height:1.75;
-      max-width:680px;margin-inline:auto;
-    }
-    .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-    .btn-wa{
-      display:inline-flex;align-items:center;gap:10px;
-      background:var(--wa);color:#fff;padding:16px 34px;
-      border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;
-      box-shadow:0 8px 28px rgba(37,211,102,.45);transition:all .3s;letter-spacing:.4px;
-    }
-    .btn-wa:hover{transform:translateY(-4px);box-shadow:0 14px 38px rgba(37,211,102,.55);background:var(--wa-dk)}
-    .btn-ghost{
-      display:inline-flex;align-items:center;gap:10px;
-      border:2px solid rgba(255,255,255,.72);color:#fff;
-      padding:14px 30px;border-radius:50px;text-decoration:none;
-      font-weight:600;font-size:1rem;transition:all .3s;
-    }
-    .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff;transform:translateY(-3px)}
-    .scroll-hint{
-      position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
-      color:rgba(255,255,255,.65);text-align:center;cursor:pointer;
-      animation:bobble 2.2s infinite;font-size:.72rem;letter-spacing:2px;
-    }
-    .scroll-hint .arr{font-size:1.4rem;display:block;margin-top:5px}
-    @keyframes bobble{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)}}
+    .nav-links { display: flex; gap: 15px; align-items: center; }
+    .nav-links a { color: #fff; text-decoration: none; font-size: .85rem; font-weight: 700; transition: .3s; }
+    .nav-links a:hover { color: var(--dorado-lt); }
+    .nav-wa { background: var(--wa); padding: 10px 20px; border-radius: 25px; }
 
-    /* ── STAT BAR ─────────────────────────── */
-    .stat-bar{
-      background:linear-gradient(135deg,var(--dorado),var(--dorado-lt));
-      padding:36px 5%;
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-      gap:20px;text-align:center;
+    /* HERO */
+    .hero {
+      position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
     }
-    .stat-n{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--verde)}
-    .stat-l{font-size:.82rem;color:rgba(27,67,50,.78);font-weight:700;letter-spacing:.3px}
+    .hero-bg { position: absolute; inset: 0; background: url('hero_panama.png') center/cover; z-index: -1; }
+    .hero-ov { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(27,67,50,.8), rgba(0,119,182,.5)); z-index: -1; }
+    .hero-h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.1; }
+    .hero-h1 em { color: var(--dorado-lt); font-style: normal; }
+    .hero-sub { margin: 20px auto 40px; max-width: 700px; font-size: 1.2rem; opacity: 0.9; }
 
-    section{padding:88px 5%}
-    .s-label{
-      display:block;margin-bottom:10px;
-      font-size:.75rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;
-      background:linear-gradient(135deg,var(--dorado),var(--dorado-lt));
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-    }
-    .s-title{
-      font-family:'Playfair Display',serif;
-      font-size:clamp(2rem,4.5vw,3.1rem);font-weight:700;
-      color:var(--verde);margin-bottom:14px;line-height:1.15;
-    }
-    .s-title.w{color:#fff}
-    .s-sub{font-size:1.05rem;color:#5a5a5a;max-width:660px;line-height:1.85;margin-bottom:48px}
-    .s-sub.w{color:rgba(255,255,255,.82)}
-
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
-    .tcard{
-      background:#fff;border-radius:var(--radius);overflow:hidden;
-      box-shadow:var(--shadow-sm);transition:all .4s cubic-bezier(.175,.885,.32,1.275);
-    }
-    .tcard:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}
-    .tcard-img{position:relative;height:245px;overflow:hidden}
-    .tcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
-    .tcard:hover .tcard-img img{transform:scale(1.09)}
-    .tcard-badge{
-      position:absolute;top:14px;left:14px;
-      background:var(--dorado);color:#fff;
-      padding:5px 14px;border-radius:20px;font-size:.72rem;font-weight:700;
-    }
-    .tcard-body{padding:28px}
-    .tcard-ico{font-size:1.9rem;margin-bottom:10px}
-    .tcard-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--verde);margin-bottom:9px}
-    .tcard-txt{color:#666;line-height:1.82;font-size:.93rem;margin-bottom:14px}
-    .species{list-style:none;margin-bottom:18px}
-    .species li{display:flex;align-items:flex-start;gap:8px;font-size:.89rem;color:#555;margin-bottom:6px}
-    .species li::before{content:"●";color:var(--dorado);font-size:.45rem;margin-top:7px;flex-shrink:0}
-    .species em{color:#999;font-style:italic;font-size:.8rem}
-    .btn-sm{
-      display:inline-flex;align-items:center;gap:8px;
-      background:linear-gradient(135deg,var(--verde),var(--verde-md));
-      color:#fff;padding:11px 22px;border-radius:24px;text-decoration:none;
-      font-size:.86rem;font-weight:700;transition:all .3s;
-    }
-    .btn-sm:hover{transform:translateX(5px);box-shadow:0 6px 22px rgba(27,67,50,.38)}
-
-    .gal{
-      display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:290px 290px;
-      gap:10px;border-radius:var(--radius);overflow:hidden;margin-bottom:50px;
-    }
-    .gal-main{grid-row:span 2}
-    .gal img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
-
-    #historia{background:#fff}
-    .hgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
-    .hcard{ background:#fff;border-radius:var(--radius);overflow:hidden; box-shadow:var(--shadow-sm);border-top:4px solid var(--azul);transition:all .4s;}
-    .yr{display:inline-block;background:var(--azul);color:#fff;padding:3px 10px;border-radius:12px;font-size:.72rem;font-weight:700;margin-bottom:7px}
-
-    #compras{background:linear-gradient(135deg,var(--verde) 0%,var(--azul) 100%)}
-    .ccard{ background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2); border-radius:var(--radius);padding:36px;text-align:center; backdrop-filter:blur(10px);transition:all .3s;}
-    .ctitle{font-family:'Playfair Display',serif;font-size:1.42rem;color:#fff;margin-bottom:11px}
-    .ctxt{color:rgba(255,255,255,.85);line-height:1.82;font-size:.93rem}
-
-    #bienestar{ position:relative;overflow:hidden; background:linear-gradient(135deg,#080c0a 0%,#0e1e16 50%,#0a1520 100%);}
-    #bienestar::before{ content:'';position:absolute;inset:0; background:url('spa_bienestar.png') center/cover;opacity:.14;}
-    .wcard{ background:linear-gradient(135deg,rgba(201,168,76,.14),rgba(201,168,76,.04)); border:1px solid rgba(201,168,76,.28);border-radius:var(--radius); padding:36px;text-align:center;transition:all .4s;}
-    .wtitle{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--dorado-lt);margin-bottom:11px}
-
-    #pagos{background:var(--gris)}
-    .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-    .pbox{ background:#fff;border-radius:var(--radius);padding:40px; box-shadow:var(--shadow-sm);border-left:6px solid var(--dorado);}
-    .pval{font-weight:700;color:var(--texto);font-size:.98rem}
-    .pcta{ background:linear-gradient(135deg,var(--verde),var(--verde-md)); border-radius:22px;padding:50px 38px;color:#fff;text-align:center;}
-
-    #contacto{background:var(--verde);padding:60px 5%}
-    .concard{ text-align:center;padding:28px 18px; background:rgba(255,255,255,.08);border-radius:14px; border:1px solid rgba(255,255,255,.1);transition:.3s;}
+    /* SECCIONES Y TARJETAS */
+    section { padding: 80px 5%; }
+    .s-label { color: var(--dorado); text-transform: uppercase; font-weight: 700; letter-spacing: 3px; font-size: 0.8rem; display: block; margin-bottom: 10px; }
+    .s-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--verde); margin-bottom: 40px; }
     
-    footer{ background:#080f0b;color:rgba(255,255,255,.55); padding:28px 5%;display:flex;justify-content:space-between; align-items:center;flex-wrap:wrap;gap:14px;}
-    .wa-float{ position:fixed;bottom:28px;right:28px;z-index:999; background:var(--wa);color:#fff;width:58px;height:58px; border-radius:50%;display:flex;align-items:center;justify-content:center; font-size:1.7rem;text-decoration:none; box-shadow:0 6px 24px rgba(37,211,102,.5); animation:pulse 2.5s infinite;}
-    @keyframes pulse{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.5)}50%{box-shadow:0 6px 34px rgba(37,211,102,.75)}}
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .tcard { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); transition: 0.3s; }
+    .tcard:hover { transform: translateY(-10px); }
+    .tcard-img { height: 250px; overflow: hidden; }
+    .tcard-img img { width: 100%; height: 100%; object-fit: cover; }
+    .tcard-body { padding: 25px; }
+    .tcard-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--verde); margin-bottom: 15px; }
+    .tcard-txt { color: #555; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+    
+    .btn-sm { background: var(--verde); color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 20px; font-weight: 700; display: inline-block; }
 
-    @media(max-width:768px){ .nav-links .hide{display:none} .pgrid{grid-template-columns:1fr} .gal{grid-template-columns:1fr 1fr;grid-template-rows:auto} }
+    /* BIENESTAR Y COMPRAS */
+    #compras { background: var(--verde); color: #fff; }
+    #compras .s-title { color: #fff; }
+    .cgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .ccard { background: rgba(255,255,255,0.1); padding: 30px; border-radius: var(--radius); text-align: center; }
+
+    #bienestar { background: #0b1a14; color: #fff; }
+    .wcard { border: 1px solid var(--dorado); padding: 25px; border-radius: var(--radius); text-align: center; }
+    .wtitle { color: var(--dorado-lt); font-family: 'Playfair Display', serif; margin-bottom: 10px; }
+
+    /* PAGOS */
+    #pagos { background: var(--gris); }
+    .pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .pbox { background: #fff; padding: 40px; border-radius: var(--radius); border-left: 6px solid var(--dorado); }
+    .pcta { background: linear-gradient(135deg, var(--verde), var(--verde-md)); color: #fff; padding: 40px; border-radius: var(--radius); text-align: center; }
+    .btn-wa-lg { background: var(--wa); color: #fff; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px; }
+
+    footer { background: #080f0b; color: #fff; padding: 40px 5%; text-align: center; }
+    .wa-float { position: fixed; bottom: 20px; right: 20px; background: var(--wa); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+
+    @media (max-width: 768px) { .pgrid { grid-template-columns: 1fr; } .nav-links .hide { display: none; } }
   </style>
 </head>
 <body>
 
-<a href="https://wa.me/50760173735" class="wa-float" title="Chatear por WhatsApp" target="_blank">📱</a>
+<a href="https://wa.me/50760173735" class="wa-float" target="_blank">📱</a>
 
 <nav>
   <a class="logo" href="#">
-    <div class="logo-icon">
-        <img src="logo.ico" alt="Logo">
-    </div>
+    <div class="logo-icon"><img src="logo.ico" alt="Logo"></div>
     <div>
       <div class="logo-name">Alfaro's Tour</div>
       <div class="logo-tag">Panamá Auténtico</div>
     </div>
   </a>
   <div class="nav-links">
-    <a href="#naturaleza" class="hide">🌿 Naturaleza</a>
-    <a href="#historia" class="hide">🏛️ Historia</a>
-    <a href="#compras" class="hide">🛍️ Compras</a>
-    <a href="#bienestar" class="hide">💆 Bienestar</a>
-    <a href="#pagos" class="hide">💳 Reservas</a>
-    <a href="https://wa.me/50760173735" class="nav-wa" target="_blank">📱 WhatsApp</a>
+    <a href="#naturaleza" class="hide">Naturaleza</a>
+    <a href="#historia" class="hide">Historia</a>
+    <a href="#compras" class="hide">Compras</a>
+    <a href="#bienestar" class="hide">Bienestar</a>
+    <a href="https://wa.me/50760173735" class="nav-wa" target="_blank">WhatsApp</a>
   </div>
 </nav>
 
@@ -239,91 +111,92 @@
   <div class="hero-bg"></div>
   <div class="hero-ov"></div>
   <div class="hero-body">
-    <div class="hero-pill">✦ Guías Certificados &amp; Experiencias Únicas ✦</div>
     <h1 class="hero-h1">Explore la Verdadera<br/><em>Esencia de Panamá</em></h1>
-    <p class="hero-sub">Biodiversidad tropical, culturas indígenas milenarias, historia colonial y la magia de un país donde se unen dos océanos.</p>
-    <div class="hero-btns">
-      <a href="https://wa.me/50760173735" class="btn-wa" target="_blank">📱 Reservar por WhatsApp</a>
-      <a href="#naturaleza" class="btn-ghost">🗺️ Ver Tours</a>
-    </div>
+    <p class="hero-sub">Biodiversidad tropical, culturas indígenas e historia viva con Alfaro's Tour.</p>
+    <a href="https://wa.me/50760173735" class="btn-wa-lg">Reservar Ahora</a>
   </div>
-</div>
-
-<div class="stat-bar">
-  <div><div class="stat-n">10+</div><div class="stat-l">Destinos</div></div>
-  <div><div class="stat-n">3</div><div class="stat-l">Etnias</div></div>
-  <div><div class="stat-n">500+</div><div class="stat-l">Viajeros</div></div>
-  <div><div class="stat-n">24/7</div><div class="stat-l">Soporte</div></div>
 </div>
 
 <section id="naturaleza">
   <span class="s-label">🌿 Tours de Naturaleza</span>
-  <h2 class="s-title">Biodiversidad Sin Igual</h2>
+  <h2 class="s-title">Destinos Estrella</h2>
   <div class="cards">
     <div class="tcard">
       <div class="tcard-img"><img src="monos_lago_gatun.png" alt="Monos"></div>
       <div class="tcard-body">
         <h3 class="tcard-title">Isla de los Monos</h3>
-        <p class="tcard-txt">Navegue las aguas del mítico Lago Gatún para ver primates en libertad.</p>
-        <a href="https://wa.me/50760173735" class="btn-sm">Reservar ahora →</a>
+        <p class="tcard-txt">Navegue el Lago Gatún y observe primates en su hábitat natural.</p>
+        <a href="https://wa.me/50760173735" class="btn-sm">Más información</a>
       </div>
     </div>
     <div class="tcard">
       <div class="tcard-img"><img src="cultura_embera.png" alt="Embera"></div>
       <div class="tcard-body">
-        <h3 class="tcard-title">Pueblo Emberá</h3>
-        <p class="tcard-txt">Encuentro genuino con guardianes de saberes ancestrales en el río Chagres.</p>
-        <a href="https://wa.me/50760173735" class="btn-sm">Reservar ahora →</a>
+        <h3 class="tcard-title">Cultura Emberá</h3>
+        <p class="tcard-txt">Conozca las tradiciones y la historia de los pueblos originarios.</p>
+        <a href="https://wa.me/50760173735" class="btn-sm">Más información</a>
       </div>
     </div>
   </div>
 </section>
 
 <section id="historia">
-  <span class="s-label">🏛️ Historia</span>
-  <h2 class="s-title">Siglos de Historia Viva</h2>
-  <div class="hgrid">
-    <div class="hcard">
+  <span class="s-label">🏛️ Historia y Ciudad</span>
+  <h2 class="s-title">Panamá Histórico</h2>
+  <div class="cards">
+    <div class="tcard">
       <div class="tcard-img"><img src="panama_viejo.png" alt="Panama Viejo"></div>
       <div class="tcard-body">
-        <div class="yr">UNESCO</div>
         <h3 class="tcard-title">Panamá Viejo</h3>
-        <p class="tcard-txt">Las ruinas de la primera ciudad europea en el Pacífico americano.</p>
+        <p class="tcard-txt">Las ruinas de la primera ciudad europea en el Pacífico.</p>
       </div>
     </div>
-    <div class="hcard">
-      <div class="tcard-img"><img src="portobelo.png" alt="Portobelo"></div>
+    <div class="tcard">
+      <div class="tcard-img"><img src="valle_anton.png" alt="Valle Anton"></div>
       <div class="tcard-body">
-        <div class="yr">Caribe</div>
-        <h3 class="tcard-title">Portobelo</h3>
-        <p class="tcard-txt">Fortaleza colonial y hogar del Cristo Negro.</p>
+        <h3 class="tcard-title">Valle de Antón</h3>
+        <p class="tcard-txt">Naturaleza y clima fresco en el cráter de un volcán extinto.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="compras">
+  <span class="s-label" style="color:var(--dorado-lt)">🛍️ Compras</span>
+  <h2 class="s-title">Zona Libre y Traslados</h2>
+  <div class="cgrid">
+    <div class="ccard"><h3>Zona Libre</h3><p>Compras libres de impuestos en Colón.</p></div>
+    <div class="ccard"><h3>Cruceros</h3><p>Traslados puntuales a puertos.</p></div>
+  </div>
+</section>
+
+<section id="bienestar">
+  <span class="s-label">💆 Bienestar</span>
+  <h2 class="s-title" style="color:var(--dorado-lt)">Relajación Profesional</h2>
+  <div class="cards">
+    <div class="wcard"><h3 class="wtitle">Estilismo</h3><p>Cortes y coloración profesional.</p></div>
+    <div class="wcard"><h3 class="wtitle">Estética</h3><p>Faciales y cuidado de la piel.</p></div>
   </div>
 </section>
 
 <section id="pagos">
   <div class="pgrid">
     <div class="pbox">
-      <h3>💳 Datos Bancarios</h3>
-      <p class="pval">Rogelio Ismael Alfaro Rivas</p>
-      <p class="pval">Banco General - Ahorros</p>
-      <p class="pval">#0472019545084</p>
-      <div class="pnote">Aceptamos Yappy, Nequi y Transferencias.</div>
+      <h3 class="s-title" style="font-size:1.5rem">💳 Pagos</h3>
+      <p><strong>Titular:</strong> Rogelio Ismael Alfaro Rivas</p>
+      <p><strong>Banco General:</strong> #0472019545084</p>
+      <p>Aceptamos Yappy, Nequi y Transferencias.</p>
     </div>
     <div class="pcta">
-      <h3>¿Listo para Explorar?</h3>
-      <a href="https://wa.me/50760173735" class="btn-wa-lg">📱 WhatsApp Directo</a>
+      <h3>¿Listo para su aventura?</h3>
+      <a href="https://wa.me/50760173735" class="btn-wa-lg">Escríbenos por WhatsApp</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="fbrand">Alfaro's Tour Panama</div>
-  <div class="flinks">
-    <a href="https://www.instagram.com/trips_alfaro507">Instagram</a>
-    <span>touralfaro@gmail.com</span>
-  </div>
+  <p>Alfaro's Tour Panama — @trips_alfaro507</p>
+  <p style="opacity:0.5; font-size:0.8rem; margin-top:20px;">&copy; 2024 Todos los derechos reservados.</p>
 </footer>
 
 </body>
