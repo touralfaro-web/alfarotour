@@ -1,93 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Alfaro's Tour — Receptive tourism and wellness services in Panama. Explore the true essence of Panama with expert guides."/>
-  <meta name="keywords" content="Panama Tours, Monkey Island, Embera, Casco Antiguo, Amador Causeway, Nightlife Panama, Wellness Panama"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alfaro's Tour — Explore the True Essence of Panama</title>
   
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --verde: #1B4332; --verde-md: #2D6A4F; --verde-lt: #40916C;
-      --azul: #0077B6; --azul-lt: #00B4D8;
+      --verde: #1B4332; --verde-md: #2D6A4F;
       --dorado: #C9A84C; --dorado-lt: #E9C46A;
-      --blanco: #FAFAFA; --gris: #F4F6F4; --texto: #1A1A1A;
-      --wa: #25D366; --wa-dk: #1DAE54;
-      --shadow-md: 0 6px 24px rgba(0,0,0,.11);
-      --radius: 18px;
+      --blanco: #FAFAFA; --texto: #1A1A1A;
+      --wa: #25D366; --shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Lato', sans-serif; color: var(--texto); background: var(--blanco); overflow-x: hidden; }
+    body { font-family: 'Lato', sans-serif; background: var(--blanco); color: var(--texto); line-height: 1.6; }
 
-    /* --- NAVIGATION --- */
+    /* NAVEGACIÓN */
     nav {
       position: sticky; top: 0; z-index: 1000;
-      background: rgba(27,67,50,.96); backdrop-filter: blur(14px);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5%; height: 70px; box-shadow: 0 2px 20px rgba(0,0,0,.3);
+      background: #1B4332; display: flex; align-items: center; 
+      justify-content: space-between; padding: 0 5%; height: 70px;
     }
-    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .logo img { width: 45px; height: 45px; border-radius: 50%; border: 2px solid var(--dorado); }
-    .logo-name { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.2rem; font-weight: 700; line-height: 1; }
-    .logo-tag { font-size: .6rem; color: var(--dorado-lt); letter-spacing: 1.5px; text-transform: uppercase; }
-    
-    .nav-links { display: flex; gap: 10px; align-items: center; }
-    .nav-links a { color: #fff; text-decoration: none; padding: 8px 12px; font-size: .85rem; font-weight: 700; transition: .3s; }
-    .nav-links a:hover { color: var(--dorado-lt); }
-    .nav-wa { background: var(--wa); padding: 8px 18px!important; border-radius: 25px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo img { width: 45px; height: 45px; border-radius: 50%; background: #fff; }
+    .logo-name { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.2rem; }
+    .nav-links a { color: #fff; text-decoration: none; font-weight: 700; margin-left: 15px; font-size: 0.9rem; }
 
-    /* --- HERO --- */
+    /* HERO */
     .hero {
-      position: relative; height: 100vh; min-height: 600px;
-      display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
+      height: 80vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; color: #fff; position: relative; background: #222;
     }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background: url('hero_panama.png') center/cover no-repeat;
-      z-index: -1;
-    }
-    .hero-ov { position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: -1; }
-    .hero-h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 20px; }
-    .hero-h1 em { color: var(--dorado-lt); font-style: normal; }
-    .hero-sub { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+    .hero-ov { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    .hero-body { position: relative; z-index: 2; padding: 20px; }
+    .hero-h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; }
+    .hero-sub { font-size: 1.2rem; margin-bottom: 20px; }
 
-    /* --- SECTIONS --- */
-    section { padding: 80px 5%; }
-    .s-label { display: block; text-align: center; font-size: .75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--dorado); margin-bottom: 10px; }
-    .s-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; color: var(--verde); }
-
-    /* --- CARDS --- */
-    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-    .tcard { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); transition: .3s; }
-    .tcard:hover { transform: translateY(-10px); }
-    .tcard-img { height: 250px; position: relative; }
+    /* TOURS */
+    section { padding: 60px 5%; }
+    .s-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 40px; color: var(--verde); }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .tcard { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); }
+    .tcard-img { height: 200px; background: #ddd; }
     .tcard-img img { width: 100%; height: 100%; object-fit: cover; }
-    .tcard-body { padding: 30px; }
-    .tcard-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--verde); margin-bottom: 10px; }
-    .tcard-txt { color: #555; font-size: .95rem; line-height: 1.6; margin-bottom: 20px; }
+    .tcard-body { padding: 20px; }
+    .tcard-title { font-family: 'Playfair Display', serif; margin-bottom: 10px; color: var(--verde); }
     
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 700; transition: .3s; }
-    .btn-wa { background: var(--wa); color: #fff; }
-    .btn-wa:hover { background: var(--wa-dk); transform: scale(1.05); }
+    .btn { display: inline-block; padding: 10px 20px; background: var(--wa); color: #fff; text-decoration: none; border-radius: 25px; font-weight: 700; margin-top: 10px; }
 
-    /* --- FOOTER --- */
-    footer { background: #080f0b; color: #fff; padding: 60px 5%; text-align: center; }
-    .social-link {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: #fff; color: #000; padding: 12px 25px;
-      border-radius: 50px; text-decoration: none; font-weight: 700; margin-top: 20px;
-    }
-    .wa-float { position: fixed; bottom: 25px; right: 25px; background: var(--wa); color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 2000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-
-    @media (max-width: 768px) {
-      .nav-links .hide { display: none; }
-      .hero-h1 { font-size: 2.8rem; }
-    }
+    /* FOOTER */
+    footer { background: #080f0b; color: #fff; padding: 40px 5%; text-align: center; }
+    .insta-btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #000; padding: 10px 20px; border-radius: 50px; text-decoration: none; margin-top: 15px; font-weight: 700; }
+    .wa-float { position: fixed; bottom: 20px; right: 20px; background: var(--wa); color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; box-shadow: var(--shadow); }
   </style>
 </head>
 <body>
@@ -96,6 +62,64 @@
 
   <nav>
     <a class="logo" href="#">
-      <img src="logo.png" alt="Alfaro's Tour">
+      <img src="logo.ico" alt="Logo">
       <div>
-        <div class="logo-name">
+        <div class="logo-name">Alfaro's Tour</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#tours">Tours</a>
+      <a href="https://wa.me/50760173735" target="_blank">WhatsApp</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-ov"></div>
+    <div class="hero-body">
+      <h1 class="hero-h1">Experience Panama</h1>
+      <p class="hero-sub">Authentic Adventures with Professional Guides</p>
+      <a href="#tours" class="btn">View All Tours</a>
+    </div>
+  </div>
+
+  <section id="tours">
+    <h2 class="s-title">Featured Tours</h2>
+    <div class="cards-grid">
+      <div class="tcard">
+        <div class="tcard-img"><img src="monos_lago_gatun.png" alt="Monkey Island"></div>
+        <div class="tcard-body">
+          <h3 class="tcard-title">Monkey Island</h3>
+          <p>Wildlife adventure at the Panama Canal.</p>
+          <a href="https://wa.me/50760173735" class="btn">Book Now</a>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-img"><img src="cultura_embera.png" alt="Embera Culture"></div>
+        <div class="tcard-body">
+          <h3 class="tcard-title">Emberá Village</h3>
+          <p>Cultural encounter in the rainforest.</p>
+          <a href="https://wa.me/50760173735" class="btn">Book Now</a>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-img"><img src="casco_antiguo.png" alt="Nightlife"></div>
+        <div class="tcard-body">
+          <h3 class="tcard-title">Nightlife: Casco & Causeway</h3>
+          <p>Dinner, rooftops, and the best city views.</p>
+          <a href="https://wa.me/50760173735" class="btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Follow us for more adventures!</p>
+    <a href="https://www.instagram.com/trips_alfaro507" target="_blank" class="insta-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20" alt="IG">
+      @trips_alfaro507
+    </a>
+    <p style="margin-top: 20px; opacity: 0.6; font-size: 0.8rem;">&copy; 2026 Alfaro's Tour Panama</p>
+  </footer>
+
+</body>
+</html>
